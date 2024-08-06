@@ -146,7 +146,7 @@ class _loginpageState extends State<loginpage> {
         log(customerLoginPostResponse.customer.fullname);
         log(customerLoginPostResponse.customer.email);
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const ShowtripPage()));
+            MaterialPageRoute(builder: (context) => ShowtripPage(idx : customerLoginPostResponse.customer.idx)));
       },
     ).catchError((error) {
       log('Error $error');
